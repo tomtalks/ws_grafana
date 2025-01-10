@@ -1,0 +1,6 @@
+.code/
+**/secret-*.yaml
+.idea/
+public/
+.DS_Store
+.venv/

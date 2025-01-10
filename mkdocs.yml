@@ -1,0 +1,71 @@
+site_name: ❤️ Grafana ❤️ 
+site_url: https://tomtalks.github.io/ws_grafana/
+site_author: TJO & MVT
+site_description: Workshop documentation for grafana
+site_dir: 'public/'
+docs_dir: '.'
+
+repo_name: tomtalks/ws_grafana
+repo_url:  https://github.com/tomtalks/ws_grafana
+
+copyright: Copyright &copy; 2025 TomTalks
+
+exclude_docs: |
+  .venv/
+  media/*.png
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.code.annotate
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode    
+
+plugins:
+  - same-dir
+  - search
+  - timetoread
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html      
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/tomtalks/ws_grafana
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/yodamad03
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/farunty
+
+# Migrate this to .pages file
+nav:
+  - 🏠 Home: "README.md"
+  - 🎉 Notre environnement 🛠️: "setup/README.md"
+  - 🚂 Présentation de l'application: "intro/README.md"
+  - 📊 Graphiques: "vizu/1.md"
+  
