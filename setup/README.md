@@ -6,7 +6,7 @@ Pour démarrer, nous allons installer Docker et lancer le stack Docker Compose p
 
 Docker est indispensable pour exécuter les différents services de notre workshop.
 
-Si vous avez déjà Docker (et docker compose) installé, vous pouvez directement vous rendre à l'étape [Cloner le projet](## 3. Cloner le projet).
+Si vous avez déjà Docker (et docker compose) installé, vous pouvez directement vous rendre à l'étape [Cloner le projet](##Cloner-le-projet).
 
 Sinon suivez les instructions ci-dessous en fonction de votre système d'exploitation :
 
@@ -77,9 +77,9 @@ docker compose up -d
 
 Cette commande va démarrer :
 
-* Une base de données PostgreSQL
-* Un backend Java avec OpenTelemetry
-* Trois applications cliente du Backend 
+* Une base de données PostgreSQL 🐘
+* Un backend Java avec OpenTelemetry ☕
+* Trois applications cliente du Backend  ☕   
 * Un conteneur Grafana 
 
 ### 5. Vérifier que tout fonctionne
@@ -101,6 +101,7 @@ http://localhost:3000
 ```
 
 Les identifiants par défaut sont :
+
 * **Utilisateur** : `admin`
 * **Mot de passe** : `admin`
 
