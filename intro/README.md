@@ -2,13 +2,13 @@
 
 ## Introduction à Grafana et ses menus principaux
 
-Avec ce chapitre nous allons nous familiarisé avec les différents menu de configuration accessible depuis l'interface de Grafana.
+Dans ce chapitre, nous allons nous familiariser avec les différents menus de configuration accessibles depuis l'interface de Grafana.
 
-Nous n'explorerons pas en détails les menu d'administration par la suite mais il est important de les connaitre.
+Nous n'explorerons pas en détail les menus d'administration par la suite, mais il est important de les connaître.
 
 Voici les principaux menus que vous utiliserez dans Grafana :
 
-Sur le coté gauche de l'application:
+Sur le côté gauche de l'application :
 
 ![Menu](image.png){ align=left }
 
@@ -16,24 +16,24 @@ Sur le coté gauche de l'application:
 La page d'accueil qui vous permet d'accéder rapidement à vos tableaux de bord favoris et d'explorer les options de configuration générales.
 
 ### **Dashboards**
-Cette section permet de gérer vos tableaux de bord Creation + liste des dashboards existants.
+Cette section permet de gérer vos tableaux de bord : création et liste des dashboards existants.
 
-Les menu **Bookmarks** et **Starred** permettent de retrouver rapidement les tableaux de bord que vous avez marqué comme favoris.
+Les menus **Bookmarks** et **Starred** permettent de retrouver rapidement les tableaux de bord que vous avez marqués comme favoris.
 
 ### **Explore**
-Un outil interactif pour analyser rapidement vos données (Idéal pour le dépannage rapide)
+Un outil interactif pour analyser rapidement vos données (idéal pour le dépannage rapide).
 
 Nous en parlerons plus en détail dans un prochain chapitre. TODO
 
 ### **Alerting**
-Configurez des alertes pour surveiller vos données et être notifié en cas d'anomalies 
+Configurez des alertes pour surveiller vos données et être notifié en cas d'anomalies.
 
 Nous en parlerons plus en détail dans un prochain chapitre. TODO
 
 ### **Connections**
-Grafana ne fournit pas de sources de données il n'est pas responsable du stockage. 
+Grafana ne fournit pas de sources de données et n'est pas responsable du stockage.
 
-Il se connecte uniquement à ces **data sources** pour afficher les données. Dans notre TP nous aurrons l'occasion de jouer avec les sources de données les plus courantes.
+Il se connecte uniquement à ces **data sources** pour afficher les données. Dans notre TP, nous aurons l'occasion de jouer avec les sources de données les plus courantes.
 
 On verra qu'il n'y a pas de langage de requête spécifique à Grafana, il utilise le langage de requête de la source de données.
 
@@ -41,17 +41,16 @@ On verra qu'il n'y a pas de langage de requête spécifique à Grafana, il utili
 
 Permet de configurer les différents aspects de Grafana :
 
-* **General** : En plus des menus de configuration on trouve ici la notion d'**Organization** c'est le plus haut niveau de ségregation de grafana.
+* **General** : En plus des menus de configuration, on trouve ici la notion d'**Organization**. C'est le plus haut niveau de ségrégation de Grafana.
 
-![alt text](image-2.png){ align=left } Une **Organization** représente un tenant de votre instance. Il est possible d'y affecter des utiliseurs et de leur donner des droits d'administration / editeur / consultation.
+![alt text](image-2.png){ align=left } Une **Organization** représente un tenant de votre instance. Il est possible d'y affecter des utilisateurs et de leur donner des droits d'administration / éditeur / consultation.
 
-Toutes les ressources d'une organisation sont isolées des autres organisations. Il n'est pas possible de partager une datasource ou un dashboard entre deux organisations. Cette ségregation présente quelques limitations mais elle à le mérite de faire partie de la version gratuite de grafana.
+Toutes les ressources d'une organisation sont isolées des autres organisations. Il n'est pas possible de partager une datasource ou un dashboard entre deux organisations. Cette ségrégation présente quelques limitations, mais elle a le mérite de faire partie de la version gratuite de Grafana.
 
-Si vous etes membre de plusieurs organisation vous pouvez changer d'organisation en cliquant sur le nom de l'organisation en haut à gauche de l'interface.
+Si vous êtes membre de plusieurs organisations, vous pouvez changer d'organisation en cliquant sur le nom de l'organisation en haut à gauche de l'interface.
 
 * **Plugins** : Installez des plugins pour étendre les fonctionnalités de Grafana (widgets, datasources, extensions).
 * **Users** : Gérez les utilisateurs et les permissions. Il est possible de regrouper les utilisateurs en **Teams** pour faciliter la gestion des droits.
-
 * **Authentification** : Permet de configurer les différents modes d'authentification (LDAP, OAuth, etc.)
 
 ![top-left](image-1.png){ align=right }
@@ -62,12 +61,12 @@ Un espace pour accéder à la documentation et aux ressources d'aide :
 * **Community Support** : Rejoignez la communauté Grafana.
 * **Documentation** : Lisez les guides officiels pour approfondir vos connaissances.
 
-## Acces à votre profil
+## Accès à votre profil
 
-Gestion langue, des time Zones, mdp  ... 
+Gestion de la langue, des fuseaux horaires, des mots de passe, etc.
 
 ## Mais encore ?
 
-Bon ... Et si on commencé notre workshop ?
+Bon ... Et si on commençait notre workshop ?
 
 **🛫 Prochaine étape : Mon premier Dashboard [➡️](../vizu/1.md)**

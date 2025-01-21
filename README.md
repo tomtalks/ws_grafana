@@ -1,11 +1,10 @@
 # 🪵 Un dashboard Grafana qui claque 🌟
 
-Bienvenue dans ce workshop sur Grafana ! L'objectif est de vous faire découvrir et manipuler Grafana en exploitant différents type de données.
+Bienvenue dans ce workshop sur Grafana ! L'objectif est de vous faire découvrir et manipuler Grafana en exploitant différents types de données.
 
-Pour celà nous allons instancer Grafana et au fur et à mesure nous ajouterons des sources de données et des dashboards, en explorant les différentes fonctionnalités.
+Pour cela, nous allons instancier Grafana et au fur et à mesure, nous ajouterons des sources de données et des dashboards, en explorant les différentes fonctionnalités.
 
-Vous avez à votre disposition une application contenant un front, plusieurs back et une base de données Postgres.
-
+Vous avez à votre disposition une application contenant un front, plusieurs backends et une base de données Postgres.
 
 ```mermaid
 flowchart TD
@@ -36,7 +35,7 @@ flowchart TD
 ## Composants de l'application
 
 - **Wood Store Dashboard** : Le front de l'application qui affiche les stocks
-- **Furniture Store** : Plusieurs back permettant de modifier les stocks de manière autonome
+- **Furniture Store** : Plusieurs backends permettant de modifier les stocks de manière autonome
 - **Lumber Camp** : Une API pour modifier les stocks et les commandes dans l'application
 - **Postgres** : La base de données
 
@@ -50,5 +49,4 @@ flowchart TD
 
 ## C'est parti 🍝
 
-
-🛫 Let's go ! Première étape : Setup de l'environement [➡️](setup/README.md)
+🛫 Let's go ! Première étape : Setup de l'environnement [➡️](setup/README.md)

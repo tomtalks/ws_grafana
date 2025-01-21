@@ -6,13 +6,13 @@ Pour démarrer, nous allons installer Docker et lancer le stack Docker Compose p
 
 Docker est indispensable pour exécuter les différents services de notre workshop.
 
-Si vous avez déjà Docker (et docker compose) installé, vous pouvez directement vous rendre à l'étape [Cloner le projet](##Cloner-le-projet).
+Si vous avez déjà Docker (et Docker Compose) installé, vous pouvez directement vous rendre à l'étape [Cloner le projet](#cloner-le-projet).
 
-Sinon suivez les instructions ci-dessous en fonction de votre système d'exploitation :
+Sinon, suivez les instructions ci-dessous en fonction de votre système d'exploitation :
 
 ### Windows
 
-Attention pour un usage professionnel une license est requise pour Docker Desktop. Si vous n'en avez pas utilisez [WSL](#windows-avec-wsl2)
+Attention, pour un usage professionnel, une licence est requise pour Docker Desktop. Si vous n'en avez pas, utilisez [WSL](#windows-avec-wsl2).
 
 1. Téléchargez [Docker Desktop pour Windows](https://docs.docker.com/desktop/setup/install/windows-install/).
 2. Installez Docker Desktop en suivant les étapes de l'assistant.
@@ -25,11 +25,8 @@ Attention pour un usage professionnel une license est requise pour Docker Deskto
    ```bash
    wsl --list --verbose
    ```
-
-3. Suivez les instructions pour [Linux](#Linux)
-
+3. Suivez les instructions pour [Linux](#linux).
 4. Dans votre terminal WSL, testez Docker avec :
-
    ```bash
    docker --version
    ```
@@ -42,7 +39,7 @@ Attention pour un usage professionnel une license est requise pour Docker Deskto
 
 ### Linux
 
-Installez Docker via votre gestionnaire de paquets. Par exemple, sur [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+Installez Docker via votre gestionnaire de paquets. Par exemple, sur [Ubuntu](https://docs.docker.com/engine/install/ubuntu/).
 
 ## 2. Installer Docker Compose
 
@@ -55,7 +52,7 @@ sudo apt-get install -y docker-compose-plugin
 Vérifiez que Docker Compose est installé :
 
 ```bash
- docker compose version
+docker compose version
 ```
 
 ## 3. Cloner le projet
@@ -67,7 +64,7 @@ git clone https://github.com/tomtalks/otel_iac
 cd otel_iac/docker
 ```
 
-### 4. Lancer Docker Compose
+## 4. Lancer Docker Compose
 
 Dans le répertoire cloné, lancez le stack Docker Compose :
 
@@ -79,20 +76,20 @@ Cette commande va démarrer :
 
 * Une base de données PostgreSQL 🐘
 * Un backend Java avec OpenTelemetry ☕
-* Trois applications cliente du Backend  ☕   
-* Un conteneur Grafana 
+* Trois applications clientes du backend ☕
+* Un conteneur Grafana
 
-### 5. Vérifier que tout fonctionne
+## 5. Vérifier que tout fonctionne
 
 Pour vérifier que vos services sont bien lancés, utilisez la commande suivante :
 
 ```bash
-docker-compose ps
+docker compose ps
 ```
 
 Vous devriez voir tous les services avec l'état `Up`.
 
-### 6. Accéder à Grafana
+## 6. Accéder à Grafana
 
 Une fois le stack lancé, ouvrez votre navigateur et rendez-vous à l'adresse suivante :
 
@@ -105,14 +102,10 @@ Les identifiants par défaut sont :
 * **Utilisateur** : `admin`
 * **Mot de passe** : `admin`
 
-!!! note "A la connection vous etes invité à changer le mot de passe de l'utilisateur"
+!!! note "À la connexion, vous êtes invité à changer le mot de passe de l'utilisateur"
 
     Ne le faites pas et cliquez sur le lien **Skip** en bas de la page.
 
-
 **🚀 Bravo !** Vous êtes prêts à explorer Grafana et à créer vos premiers tableaux de bord !
 
-**🛫 Prochaine étape : Introduction à grafana [➡️](../intro/README.md)**
-
-
-
+**🛫 Prochaine étape : Introduction à Grafana [➡️](../intro/README.md)**
