@@ -68,4 +68,7 @@ nav:
   - 🎉 Notre environnement 🛠️: "setup/README.md"
   - 🚂 Présentation de l'application: "intro/README.md"
   - 📊 Graphiques: "vizu/1.md"
+  - 🎢 Dashboard Metrics: "dashboard-metrics/README.md"
+  - 🎢 Dashboard Metrics Step2: "dashboard-metrics/advanced.md"
+  - 🛼 Dashboard Business "dashboard-business/README.md"
   

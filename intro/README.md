@@ -23,7 +23,7 @@ Les menus **Bookmarks** et **Starred** permettent de retrouver rapidement les ta
 ### **Explore**
 Un outil interactif pour analyser rapidement vos données (idéal pour le dépannage rapide).
 
-Nous en parlerons plus en détail dans un prochain chapitre. TODO
+Nous en parlerons plus en détail dans un prochain chapitre.
 
 ### **Alerting**
 Configurez des alertes pour surveiller vos données et être notifié en cas d'anomalies.
