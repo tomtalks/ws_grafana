@@ -69,4 +69,4 @@ Gestion de la langue, des fuseaux horaires, des mots de passe, etc.
 
 Bon ... Et si on commençait notre workshop ?
 
-**🛫 Prochaine étape : Mon premier Dashboard [➡️](../vizu/1.md)**
+**🛫 Prochaine étape : Notre Organisation [➡️](../organisation/README.md)**

@@ -67,6 +67,7 @@ nav:
   - 🏠 Home: "README.md"
   - 🎉 Notre environnement 🛠️: "setup/README.md"
   - 🚂 Présentation de l'application: "intro/README.md"
+  - 🏢 Organization: "organisation/README.md"
   - 📊 Graphiques: "vizu/1.md"
   - 🎢 Dashboard Metrics: "dashboard-metrics/README.md"
   - 🎢 Dashboard Metrics II: "dashboard-metrics/advanced.md"
