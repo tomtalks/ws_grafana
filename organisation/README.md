@@ -4,13 +4,13 @@ On va commencer par créer une nouvelle organisation et un utilisateur admin de 
 
 On utilisera cet utilisateur pour faire la suite du tutoriel.
 
-# L'organisation
+## L'organisation
 
 Dans le menu *Administration*>*General*>*Organizations*, on peut créer une nouvelle organisation.
 
 ![alt text](image.png)
 
-# Création des utilisateurs
+## Création des utilisateurs
 
 On va pouvoir créer un utilisateur pour cette organisation.
 ![alt text](image-1.png)
