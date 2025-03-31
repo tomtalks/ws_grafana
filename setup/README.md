@@ -10,7 +10,7 @@ Si vous avez déjà Docker (et Docker Compose) installé, vous pouvez directemen
 
 Sinon, suivez les instructions ci-dessous en fonction de votre système d'exploitation :
 
-### Windows
+### 🪟 Windows
 
 Attention, pour un usage professionnel, une licence est requise pour Docker Desktop. Si vous n'en avez pas, utilisez [WSL](#windows-avec-wsl2).
 
@@ -31,13 +31,13 @@ Attention, pour un usage professionnel, une licence est requise pour Docker Desk
    docker --version
    ```
 
-### macOS
+### 🍏 MacOS
 
 1. Téléchargez [Docker Desktop pour Mac](https://docs.docker.com/desktop/setup/install/mac-install/).
 2. Installez l'application en déplaçant Docker dans le dossier Applications.
 3. Lancez Docker Desktop et vérifiez que Docker fonctionne (l'icône Docker doit être visible dans la barre de menus).
 
-### Linux
+### 🐧 Linux
 
 Installez Docker via votre gestionnaire de paquets. Par exemple, sur [Ubuntu](https://docs.docker.com/engine/install/ubuntu/).
 

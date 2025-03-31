@@ -30,11 +30,19 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode    
+  features:
+    # Sections opened by default
+    - navigation.expand
 
 plugins:
   - same-dir
   - search
   - timetoread
+  # Make section displayable in nav
+  - section-index
+  # Move navigation to a dedicated summary file
+  - literate-nav:
+      nav_file: nav.md
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -61,15 +69,4 @@ extra:
       link: https://twitter.com/yodamad03
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/farunty
-
-# Migrate this to .pages file
-nav:
-  - 🏠 Home: "README.md"
-  - 🎉 Notre environnement 🛠️: "setup/README.md"
-  - 🚂 Présentation de l'application: "intro/README.md"
-  - 🏢 Organization: "organisation/README.md"
-  - 📊 Graphiques: "vizu/1.md"
-  - 🎢 Dashboard Metrics: "dashboard-metrics/README.md"
-  - 🎢 Dashboard Metrics II: "dashboard-metrics/advanced.md"
-  - 🛼 Dashboard Business: "dashboard-business/README.md"
   

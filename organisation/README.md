@@ -21,4 +21,4 @@ Et lui attribuer le rôle d'administrateur de celle-ci.
 
 Vous pouvez maintenant vous déconnecter et vous reconnecter avec cet utilisateur.
 
-**🛫 Prochaine étape : Mon premier Dashboard [➡️](../vizu/1.md)**
+**🛫 Prochaine étape : Mon premier Dashboard [➡️](../labs.md)**
