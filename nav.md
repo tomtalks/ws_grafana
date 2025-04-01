@@ -5,6 +5,6 @@
     * [🏢 Organization](organisation/README.md)
 * [🧪 Labs](labs.md)
     * [🐣 Mon premier dashboard](vizu/1.md)
+    * [💾 PostGreSQL](dashboard-business/README.md)
     * [🎠 Prometheus](dashboard-metrics/README.md)
     * [🎢 Prometheus avancé](dashboard-metrics/advanced.md)
-    * [💾 PostGreSQL](dashboard-business/README.md)
