@@ -7,5 +7,5 @@
     * [🐣 Mon premier dashboard](vizu/1.md)
     * [💾 PostGreSQL](dashboard-business/README.md)
     * [🎠 Prometheus](dashboard-metrics/README.md)
-    * [🎢 Prometheus avancé](dashboard-metrics/advanced.md)
+    * [🎢 Dashboard avancé](dashboard-metrics/advanced.md)
 * [🛟 Astuces](tips.md)

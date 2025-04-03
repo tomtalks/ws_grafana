@@ -1,4 +1,4 @@
-# Un dashboard un peu plus générique
+# Un dashboard un peu plus avancé
 
 ## Configuration du dashboard
 

@@ -175,4 +175,4 @@ Objectifs:
 
 Ok c'est pas mal mais allons plus loin :
 
-**🛫 Prochaine étape : Dashboard Metrics Advanced [➡️](../dashboard-metrics/advanced.md)**
+**🛫 Prochaine étape : Dashboard Advanced [➡️](../dashboard-metrics/advanced.md)**
