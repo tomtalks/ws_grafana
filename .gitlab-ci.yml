@@ -1,15 +1,13 @@
+
 stages:
   - deploy
-
 # Pages
 pages:
   stage: deploy
-  image: squidfunk/mkdocs-material
-  environment:
-    name: main
-    url: https://k8s.grunty.uk
-  before_script: pip install -r requirements.txt; apt install chromium
-  script: mkdocs build
+  image: python:latest
+  script:
+    - pip install -r requirements.txt    
+    - mkdocs build
   artifacts:
     paths:
       - public
