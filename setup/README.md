@@ -68,13 +68,13 @@ cd otel_iac
 
 ## ☁️ Avec Code Space
 
-Vous pouvez utiliser Code Space sur [ce repository](https://github.com/tomtalks/otel_iac)
+Vous pouvez utiliser Code Space sur [ce repository](https://github.com/tomtalks/otel_iac){target="_blank"}
 ![Code Space](CodeSpace.png)
 
 
 Docker est Docker Compose sont déjà installés.
 
-! Done
+!!!success "Done"
 
 ## 🚀 Lancer la stack Docker Compose
 
