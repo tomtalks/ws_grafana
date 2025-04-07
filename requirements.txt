@@ -30,4 +30,4 @@ six==1.16.0
 urllib3==2.2.2
 watchdog==4.0.0
 mkdocs-literate-nav==0.6.2
-mkdocs-section-index==0.3.9
+mkdocs-section-index==0.3.10
