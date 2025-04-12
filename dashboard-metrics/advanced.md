@@ -87,3 +87,5 @@ Ensuite, il faut:
 
 ???danger "Spoiler la solution est là"
     ![Row options](image-33.png)
+
+**🛫 Prochaine étape : Partager [➡️](../dashboard-metrics/app_stats.md)**
