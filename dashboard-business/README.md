@@ -51,20 +51,6 @@ Il est possible d'afficher des informations qui ne sont pas temporelles dans un 
 
     ![DB](image-13.png)
 
-## Le dashboard cible
-
-Dans ce TP, l'objectif est d'avoir un dashboard qui affiche:
-
-* L'état des stocks
-* Les commandes
-* Les stocks manquants
-
-![alt text](image-2.png){width="650"}
-
-Nous allons utiliser le critère *essence de bois* dans tous nos widgets. Ce serait une bonne idée de créer une variable *type* pour pouvoir filtrer sur cette colonne.
-
-Petit tips sur les [Query variable](https://grafana.com/docs/grafana/latest/datasources/postgres/query-editor/#query-variable){target="_blank"}
-
 ## Stock Status
 
 On souhaite afficher la liste des essences de bois dans le stock.
@@ -127,7 +113,7 @@ Même si nos données ne sont pas au format time series mais que nous avons une 
 
 Il faut un peu aider Grafana en lui indiquant que la colonne est un timestamp.
 
-Et rajouter une clause where pour prendre en compte la plage de temps ou utiliser un [filtre](https://grafana.com/docs/grafana/latest/datasources/postgres/query-editor/#query-variable){target="_blank"}.
+Et rajouter une clause where pour prendre en compte la plage de temps ou utiliser un [filtre](https://grafana.com/docs/grafana/latest/datasources/postgres/query-editor/#time-series-queries){target="_blank"}.
 
 !!!success
     * Créer un widget de type *Histogramme* qui montre le nombre de commandes par type d'essence d'arbre
@@ -204,7 +190,7 @@ Dans cette dernière étape du lab, on va donc ajouter une *Variable* au niveau 
 
 ### Configurer la variable
 
-Dans les *Settings* du dashboard, configurer une variable `type_of_wood` qui récupère la liste des essences.
+Dans les *Settings* du dashboard, configurer une [variable](https://grafana.com/docs/grafana/latest/datasources/postgres/query-editor/#query-variable){target="_blank"} `type_of_wood` qui récupère la liste des essences.
 
 !!!success
     Une fois configuré, un champ de filtrage après sur le dashboard listant les différentes essences trouvées ET l'option `All`
