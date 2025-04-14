@@ -57,7 +57,7 @@ Dans ce TP, l'objectif est d'avoir un dashboard qui affiche:
 
 * L'état des stocks
 * Les commandes
-* Un autre truc ?
+* Les stocks manquants
 
 ![alt text](image-2.png){width="650"}
 
