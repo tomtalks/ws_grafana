@@ -1,8 +1,6 @@
 # Les plugin Grafana
 
-Grafana est extensible via des plugins. Il existe de nombreux plugins disponibles sur le site de Grafana. Il est possible d'installer des plugins directement depuis l'interface de Grafana ou en ligne de commande.
 
-La configuration est accessible par le menu `Administration > Plugins and data > Plugins` dans Grafana.
 
 Ici nous allons jouer avec le plugin Infinity.
 
@@ -27,7 +25,9 @@ La source de données Infinity prend en charge les fonctionnalités clés suivan
 - Panneau de graphe de nœuds Grafana, annotations, etc.
 
 ## 🚗 Utilisation avec du JSON
+
 https://github.com/grafana/grafana-infinity-datasource/discussions/34
 
 ## 🚗 Utilisation avec du CSV
+
 https://github.com/grafana/grafana-infinity-datasource/discussions/36

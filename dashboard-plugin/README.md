@@ -1,6 +1,25 @@
 # Dashboard "Infinity"
 
-L'écosystème Grafana est riche de plugins, datasources, ... Celui de *Infinity* est l'un des plus complets car offrant de nombreux use cases (HTTP, CSV, ...).
+L'écosystème Grafana est riche de plugins, ... Il existe de nombreux plugins disponibles sur le site de Grafana. Certains permettent d'ajouter des visiualisations **panels**, d'autre des **datasources**  ou encore des applications **Apps**. Les **Apps** sont des plugins plus complexes qui permettent d'ajouter des fonctionnalités avancées à Grafana.
+
+Tout comme pour la dashboard Grafana fournit une page [web](https://grafana.com/grafana/plugins/) permettant de visualiser les plugins disponibles. Il est possible de filtrer par type de plugin (datasource, panel, app, ...).
+
+La configuration est accessible par le menu `Administration > Plugins and data > Plugins` dans Grafana.
+
+Il est possible d'installer des plugins directement depuis l'interface de Grafana ou en ligne de commande.
+
+Celui de *Infinity* est l'un des plus complets car offrant de nombreux use cases :
+
+- Datasources : JSON API, CSV, TSV, XML, GraphQL, HTML, Google Sheets and HTTP/REST API, RSS/ATOM
+- Transformations des données avec UQL/GROQ
+- Diverses méthodes d'authentification :
+  - Basic authentication
+  - API key authentication
+  - OAuth2 client credentials / JWT authentication
+  - AWS/Azure/GCP authentication
+
+!!!Note "📖 `Man yesoreyeram-infinity-datasource`"
+    La documentation est disponible sur le [site de Grafana](https://grafana.com/docs/plugins/yesoreyeram-infinity-datasource/latest/){target="_blank"}.
 
 ## Installation
 
@@ -38,6 +57,7 @@ On observe que l'on a bien les données en temps réel du stock:
 Retournez dans `Dashboard` et ajoutez un nouveau intitulé `API`.
 
 Ajoutez une visualisation utilisant notre nouvelle datasource `api-lumbercamp`:
+
 - type `Pie chart``
 - affichant les portions avec leur pourcentage par type de bois
 

@@ -10,13 +10,13 @@ On va créer une nouvelle datasource via le menu `Connections > Data sources` et
 
 Les informations de connexion sont les suivantes :
 
-| Information     | Value       |
-|-----------------|-------------|
+| Information     | Value         |
+|-----------------|---------------|
 | URL             | postgres:5432 |
-| Database        | jack        |
-| User            | john        |
-| Password        | viewer      |
-| TLS/SSL Mode    | disable     |
+| Database        | jack          |
+| User            | john          |
+| Password        | viewer        |
+| TLS/SSL Mode    | disable       |
 
 !!! warning "Attention à tes doigts"
     Grafana ne fait aucun contrôle sur les requêtes qui sont envoyées sur la BDD. Un `DROP SCHEMA default CASCADE;` est assez efficace pour devoir réinitialiser la BDD...

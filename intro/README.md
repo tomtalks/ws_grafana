@@ -13,24 +13,29 @@ Sur le côté gauche de l'application :
 ![Menu](image.png){ align=left }
 
 ### **Home**
+
 La page d'accueil qui vous permet d'accéder rapidement à vos tableaux de bord favoris et d'explorer les options de configuration générales.
 
 ### **Dashboards**
+
 Cette section permet de gérer vos tableaux de bord : création et liste des dashboards existants.
 
 Les menus **Bookmarks** et **Starred** permettent de retrouver rapidement les tableaux de bord que vous avez marqués comme favoris.
 
 ### **Explore**
+
 Un outil interactif pour analyser rapidement vos données (idéal pour le dépannage rapide).
 
 Nous en parlerons plus en détail dans un prochain chapitre.
 
 ### **Alerting**
+
 Configurez des alertes pour surveiller vos données et être notifié en cas d'anomalies.
 
 Nous en parlerons plus en détail dans un prochain chapitre.
 
 ### **Connections**
+
 Grafana ne fournit pas de sources de données et n'est pas responsable du stockage.
 
 Il se connecte uniquement à ces **data sources** pour afficher les données. Dans notre TP, nous aurons l'occasion de jouer avec les sources de données les plus courantes.
