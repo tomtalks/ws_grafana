@@ -8,4 +8,5 @@
     * [💾 PostGreSQL](dashboard-business/README.md)
     * [🎠 Prometheus](dashboard-metrics/README.md)
     * [🎢 Dashboard avancé](dashboard-metrics/advanced.md)
+    * [🧩 Dashboard avec plugin](dashboard-plugin/README.md)
 * [🛟 Astuces](tips.md)

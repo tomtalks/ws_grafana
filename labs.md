@@ -15,4 +15,5 @@ Au programme donc plusieurs cas (*On vous conseille de les faire dans l'ordre, m
 * [🐣 Mon premier dashboard](vizu/1.md) : Pour découvrir les fonctionnalités de base
 * [💾 PostGreSQL](dashboard-business/README.md) : Pour afficher des données d'une base de données
 * [🎠 Prometheus](dashboard-metrics/README.md) : Pour afficher des données issues d'une source de données dynamique
-* [🎢 Prometheus avancé](dashboard-metrics/advanced.md) : Pour aller plus loin dans la configuration
+* [🎢 Dashboard avancé](dashboard-metrics/advanced.md) : Pour aller plus loin dans la configuration
+* [🧩 Dashboard avec plugin](dashboard-plugin/README.md) : Pour utiliser l'écosystème Grafana et les plugins
