@@ -14,8 +14,8 @@ Les informations de connexion sont les suivantes :
 |-----------------|-------------|
 | URL             | postgres:5432 |
 | Database        | jack        |
-| User            | jack        |
-| Password        | secret      |
+| User            | john        |
+| Password        | viewer      |
 | TLS/SSL Mode    | disable     |
 
 !!! warning "Attention à tes doigts"

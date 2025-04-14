@@ -48,22 +48,35 @@ Prometheus utilise le langage [PromQL](https://prometheus.io/docs/prometheus/lat
 
 Une requête *PromQL* retourne une liste d'enregistrements, ils sont composés des éléments suivants :
 
-* le nom de la métrique
-* les labels associés à la métrique
-* la valeur de la métrique
-* le timestamp
+* Name: le nom de la métrique
+* Labels: les labels associés à la métrique
+* Sample: la valeur de la métrique
+* Timestamp: le timestamp
 
-La clé primaire d'un enregistrement est la combinaison du nom de la métrique et des labels associés.
+![Record anatomie](anatomie.png)
+Ce schema est extrait de l'article [introduction to prometheus promql](https://levelup.gitconnected.com/introduction-to-prometheus-promql-local-setup-included-28f1da9cc2f8)
 
-Les labels et le nom de la métrique sont en partie définis par la source de données. Il est aussi possible d'ajouter des règles dans Prometheus pour ajouter / modifier / supprimer des labels.
+La clé d'un enregistrement est la combinaison du nom de la métrique, des labels associés et du temps.
+
+```prometeheus
+http_requests_total{app="myApp",instance="blue"}@1600000000 -> 5
+http_requests_total{app="myApp",instance="green"}@1600000000 -> 10
+```
+
+Dans l'exemple ci-dessus, on a deux enregistrements pour la même métrique `http_requests_total` mais avec des labels différents.
+
+On peut donc avoir plusieurs valeurs pour la même métrique :
+
+* Le **Quoi** : Ici **http_requests_total** qui exprime une unité : on observer un nombre de requete total.
+* Le **Qui** : Toutes les deux concernent l'aplication `myApp` mais sur deux instances différentes (une `blue` et une `green`).
+* Le **Quand** : La valeur est associée à un timestamp, ici `1600000000` (en secondes depuis le 1er janvier 1970).
+* La **Valeur** : La valeur de la métrique, ici `5` et `10`.
+
+Les labels et le nom de la métrique sont en partie définis par la source de données. Il est aussi possible d'ajouter des règles dans Prometheus pour [ajouter / modifier / supprimer des labels](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config).
 
 Par défaut, Prometheus va ajouter des labels pour donner des informations sur la source des données (le label **job** par exemple).
 
-C'est très utile pour séparer les données de plusieurs sources (ex environnement de production / préprod).
-
-// **TODO** : Pas clair, illustrer avec un exemple ?
-
-Le langage de requêtage *PromQL* permet de faire des opérations sur les données. On utilisera ici l'opérateur d'agrégation [sum](https://prometheus.io/docs/prometheus/latest/querying/operators/#aggregation-operators){target="_blank"}
+C'est très utile pour séparer les données de plusieurs sources (ex environnement de production / préprod ou dans l'exemple précédent **blue** et **green**).
 
 ## Le dashboard
 
@@ -98,8 +111,11 @@ En observant les labels pour identifier ceux qui sont les plus intéressants et 
 * Modifier les unités du graphe pour que les valeurs soient en `bytes`
 * Afficher **uniquement 2** courbes représentant la mémoire de type *heap* et la mémoire de type *non_heap*
 
+Le langage de requêtage *PromQL* permet de faire des opérations sur les données. On utilisera ici l'opérateur d'agrégation [sum](https://prometheus.io/docs/prometheus/latest/querying/operators/#aggregation-operators){target="_blank"}
+
 ???tip "Un indice"
     Le label `jvm_memory_type` permet de faire la différence entre la **heap** et la **non_heap**.
+    Il y a plusieurs metrics pour chaque sous catégories de mémoire. Par exemple, pour la **heap**, on a un label (`jvm_memory_pool_name` )qui permet de faire la différence entre ces sous catégories.
 
 ???tip "Indice 2"
     Attention `jvm_memory_pool_name="Metaspace"` est déjà la somme des pools : "CodeHeap 'non-nmethods'" "CodeHeap 'non-profiled nmethods'" "CodeHeap 'profiled nmethods'" "Compressed Class Space"...
@@ -130,11 +146,15 @@ Petit problème ici, la valeur correspond à la somme des temps CPU utilisés pa
 
 🛟 `PromQL Rate` à la rescousse
 
-// TODO : un peu magique le `rate`. Est-ce qu'il faut expliquer un peu la théorie maths ?
-
 On aimerait avoir la consommation par minute. Pour cela, il existe des [fonctions](https://prometheus.io/docs/prometheus/latest/querying/functions/){target="_blank"} avec **PromQL** notamment [rate](https://prometheus.io/docs/prometheus/latest/querying/functions/#rate){target="_blank"} qui permet de calculer la dérivée d'une série temporelle.
 
 Cette fonction travaille avec un **range-vector**. Le range-vector est un vecteur de valeurs sur une période donnée. Ainsi, pour calculer la dérivée d'une série temporelle, il faut spécifier une période.
+
+???note "Pourquoi **rate** et pas **delta** ou **increase** ?"
+
+    * La fonction **rate** est plus adaptée pour les séries temporelles car elle prend en compte les variations de la série dans le temps.Elle calcule la dérivée aux bornes du range indiqué.
+    * La fonction **delta** ne fait que calculer la différence entre deux valeurs, sans tenir compte du temps écoulé entre elles. De plus elle ne prends pas en compte un reset de la série (par exemple si l'application redémarre, la valeur de la métrique est remise à zéro).
+    * La fonction **increase** est utilisée pour calculer l'augmentation totale d'une série temporelle sur une période donnée. Elle ne calcule pas la dérivée, mais plutôt la somme des augmentations sur cette période.
 
 On utilisera les ranges **[1m]** **[5m]** **[15m]** qui vont calculer un rate par seconde en se basant sur l'ensemble des données des *X* dernières minutes pour chaque point de données. On reproduit ainsi l'affichage du `top` unix.
 

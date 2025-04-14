@@ -28,7 +28,7 @@ Nous en parlerons plus en détail dans un prochain chapitre.
 ### **Alerting**
 Configurez des alertes pour surveiller vos données et être notifié en cas d'anomalies.
 
-Nous en parlerons plus en détail dans un prochain chapitre. TODO
+Nous en parlerons plus en détail dans un prochain chapitre.
 
 ### **Connections**
 Grafana ne fournit pas de sources de données et n'est pas responsable du stockage.
@@ -58,6 +58,7 @@ Si vous êtes membre de plusieurs organisations, vous pouvez changer d'organisat
 ## **Help**
 
 Un espace pour accéder à la documentation et aux ressources d'aide :
+
 * **Community Support** : Rejoignez la communauté Grafana.
 * **Documentation** : Lisez les guides officiels pour approfondir vos connaissances.
 

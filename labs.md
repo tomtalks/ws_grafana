@@ -16,4 +16,6 @@ Au programme donc plusieurs cas (*On vous conseille de les faire dans l'ordre, m
 * [💾 PostGreSQL](dashboard-business/README.md) : Pour afficher des données d'une base de données
 * [🎠 Prometheus](dashboard-metrics/README.md) : Pour afficher des données issues d'une source de données dynamique
 * [🎢 Dashboard avancé](dashboard-metrics/advanced.md) : Pour aller plus loin dans la configuration
+* [🎁 Partager](dashboard-metrics/app_stats.md) : Pour comprendre comment partager (importer & exporter des dasboards)
+* [🕵️ OpenTelemetry](dashboard-metrics/otel.md) : Pour aller plus loin que Prometheus seul
 * [🧩 Dashboard avec plugin](dashboard-plugin/README.md) : Pour utiliser l'écosystème Grafana et les plugins
