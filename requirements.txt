@@ -15,7 +15,7 @@ mkdocs-material-extensions==1.3.1
 mkdocs-same-dir==0.1.3
 mkdocs-timetoread-plugin==0.0.4
 mkdocs-with-pdf==0.9.3
-packaging==24.0
+packaging==24.2
 paginate==0.5.7
 pathspec==0.12.1
 platformdirs==4.2.0
