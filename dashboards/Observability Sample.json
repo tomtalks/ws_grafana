@@ -855,112 +855,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 9,
-        "w": 22,
-        "x": 0,
-        "y": 31
-      },
-      "id": 38,
-      "options": {
-        "cellHeight": "sm",
-        "footer": {
-          "countRows": false,
-          "fields": "",
-          "reducer": [
-            "sum"
-          ],
-          "show": false
-        },
-        "showHeader": true
-      },
-      "pluginVersion": "11.6.0",
-      "targets": [
-        {
-          "datasource": {
-            "type": "tempo",
-            "uid": "${DS_TEMPO}"
-          },
-          "filters": [
-            {
-              "id": "1434943b",
-              "operator": "!=",
-              "scope": "span",
-              "tag": "http.response.status_code",
-              "value": [
-                "200"
-              ],
-              "valueType": "int"
-            },
-            {
-              "id": "status",
-              "operator": "=",
-              "scope": "intrinsic",
-              "tag": "status",
-              "valueType": "keyword"
-            },
-            {
-              "id": "span-name",
-              "operator": "=",
-              "scope": "span",
-              "tag": "name",
-              "value": [],
-              "valueType": "string"
-            }
-          ],
-          "groupBy": [
-            {
-              "id": "97de1b50",
-              "scope": "span"
-            }
-          ],
-          "limit": 20,
-          "query": "{span.http.response.status_code!=200}",
-          "queryType": "traceql",
-          "refId": "A",
-          "tableType": "traces"
-        }
-      ],
-      "title": "Error traces",
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "tempo",
-        "uid": "${DS_TEMPO}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "auto",
-            "cellOptions": {
-              "type": "auto"
-            },
-            "inspect": false
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green"
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
         "h": 26,
         "w": 24,
         "x": 0,
-        "y": 40
+        "y": 31
       },
       "id": 26,
       "options": {
@@ -1100,6 +998,6 @@
   "timezone": "",
   "title": "Observability Sample",
   "uid": "aeap3x0fe720wf",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
