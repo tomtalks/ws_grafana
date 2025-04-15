@@ -28,9 +28,7 @@ Ici par exemple, on remarque que lorsque la mémoire baisse, le CPU augmente (av
 
 ### Annotations
 
-Ici, on peut configurer des alertes qui seront matérialisées directement sur les graphs.
-
-// TODO : Ajouter un TP, pas compris comment ca fonctionne
+Ici, on peut configurer des alertes qui seront matérialisées directement sur les graphs sous forme [d'annotation](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/annotate-visualizations/). Il est possible de configrer des regles pour afficher automtiquement une annotation sur un graph.
 
 ### Variables
 
