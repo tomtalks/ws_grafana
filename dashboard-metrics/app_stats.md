@@ -45,8 +45,11 @@ On vous a préparé quelques dashboards exemples :
         --8<-- "dashboards/Perf API.json"
     ```
 
-!!!question "Quizz"
+!!!question "Quizz Perf API"
+    Sur le Dashboard Perf API :
+
     Pourquoi la visualisation **Number of request** ne donne pas le meme nombre de requetes `Order` que sa voisine ?
+
     Et pourquoi y a t'il 2 lignes `Order` ?
 
 ???tip "Inspecter les données"
