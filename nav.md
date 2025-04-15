@@ -12,3 +12,4 @@
     * [🕵️ OpenTelemetry](dashboard-metrics/otel.md)
     * [🧩 Dashboard avec plugin](dashboard-plugin/README.md)
 * [🛟 Astuces](tips.md)
+* [🕺A vos Feedback](https://mobile.devoxx.com/events/devoxxfr2025/rate-talk/12321)
