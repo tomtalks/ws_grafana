@@ -50,6 +50,3 @@ flowchart TD
 ## C'est parti 🍝
 
 🛫 Let's go ! Première étape : Setup de l'environnement [➡️](setup/README.md)
-
-
-[Open Feedback](https://openfeedback.io/COovKItjb2n5zrnhFTK3/2025-01-22/Z90ERZIJVrAVyH3kk7vP)
