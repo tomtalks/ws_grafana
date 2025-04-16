@@ -4,6 +4,7 @@ COPY ./ /site
 WORKDIR /site
 
 RUN pip install mkdocs
+RUN pip install -r requirements.txt
 
 EXPOSE 8080
 
