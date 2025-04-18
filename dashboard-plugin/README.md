@@ -23,11 +23,19 @@ Celui de *Infinity* est l'un des plus complets car offrant de nombreux use cases
 
 ## Installation
 
-Il faut tout d'abord installer le plugin. Pour cela, aller dans `Connections > Add new connection` et rechercher `infinity`
+Il faut tout d'abord installer le plugin. Pour cela, aller dans `Connections > Add new connection` et rechercher `infinity`. Puis installer le plugin.
 
 ![Infinity](infinity.png){width="300"}
 
-Puis installer le plugin. Une fois installé, vous pouvez ajouter une nouvelle *DataSource*:
+???example "Air Gap Installation"
+    Il est possible d'installer le plugin en utilisant le [zip](https://storage.googleapis.com/integration-artifacts/yesoreyeram-infinity-datasource/3.2.0/main/36ba223489266ddb4fa6f0d955f9e36af7983ae8/yesoreyeram-infinity-datasource-3.2.0.linux_amd64.zip) directement télécharger depuis le site.
+
+    Il faut ensuite le dézipper pour obtenir l'arborescence suivante:
+    ![Manual install](manualinstall.png)
+
+    `.docker/config/grafana-provisioning/plugins/yesoreyeram-infinity-datasource`
+    
+Une fois installé, vous pouvez ajouter une nouvelle *DataSource*:
 
 ![Install](install.png)
 
