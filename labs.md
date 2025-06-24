@@ -18,4 +18,6 @@ Au programme donc plusieurs cas (*On vous conseille de les faire dans l'ordre, m
 * [🎢 Dashboard avancé](dashboard-metrics/advanced.md) : Pour aller plus loin dans la configuration
 * [🎁 Partager](dashboard-metrics/app_stats.md) : Pour comprendre comment partager (importer & exporter des dasboards)
 * [🕵️ OpenTelemetry](dashboard-metrics/otel.md) : Pour aller plus loin que Prometheus seul
-* [🧩 Dashboard avec plugin](dashboard-plugin/README.md) : Pour utiliser l'écosystème Grafana et les plugins
+* [🧩 Dashboard avec plugin](dashboard-plugin/README.md) : Pour utiliser l'écosystème Grafana et les plugins et en particulier Infinity
+    * [Mode API](dashboard-plugin/README.md#mode-api)
+    * [Mode CSV](dashboard-plugin/README.md#mode-csv)

@@ -41,9 +41,11 @@ Une fois installé, vous pouvez ajouter une nouvelle *DataSource*:
 
 Le plugin dispose de nombreuses possibilités de configuration.
 
-## Configuration d'une API
+## Mode API
 
-Dans notre cas, on va configurer la connexion à une API HTTP car dans la vraie vie, il est fort possible que l'on ait pas accès directement à la BDD comme nous l'avons fait dans les premières étapes du lab.
+### Configuration
+
+Dans ce premier cas, on va configurer la connexion à une API HTTP car dans la vraie vie, il est fort possible que l'on ait pas accès directement à la BDD comme nous l'avons fait dans les premières étapes du lab.
 
 On configure donc la connexion à l'API `stock` de notre service `lumbercamp`:
 
@@ -60,7 +62,7 @@ On observe que l'on a bien les données en temps réel du stock:
 
 ![data](data.png)
 
-## Configuration du dashboard
+### Création du dashboard
 
 Retournez dans `Dashboard` et ajoutez un nouveau intitulé `API`.
 
@@ -87,3 +89,52 @@ En dupliquant la visualization précédent, configurez-en un nouveau n'affichant
     * Configurer les thresholds
         * `Base` en rouge
         * `30` en orange
+
+## Mode CSV
+
+Il est encore fréquent que l'on est des donnéees exportées au format CSV. Le plugin infinity permet de gérer ce format de données comme expliqué en introduction.
+
+### Configuration datasource
+
+On reconfigure une nouvelle datasource Infinity que l'on peut nommer `infinity-csv`. Pas besoin de remplir quoique ce soit d'autres cette fois-ci.
+
+### Création du dashboard
+
+On crée un nouveau dashboard `CSV` pour héberger nos visualizations de données issues de CSV.
+
+Dans ce nouveau dashboard, ajoutez une visualization utilisant la nouvelle datasource `infinity-csv` pour avoir le désormais classique `Pie Chart` avec l'étape des stocks que l'on peut récupérer dans un navigateur via l'[API csv stock](http://localhost:8080/api/stock/csv)
+
+!!!success "CSV chargé et interprété"
+    On obtient la visualization suivante
+
+    ![csv](csv.png)
+
+???danger "Spoiler la solution est là"
+    Dans la visualization, il faut :
+
+    * mettre le type à `CSV`
+    * mettre la source à `Inline`
+    * copier le contenu du csv téléchargé dans `Data`
+
+    ![csv_query](csv-query.png)
+
+    * créer une transformation pour que le champ `Quantity` soit interprété comme un `Number`
+
+    ![csv_transfo](csv-transfo.png)
+
+    * mettre le mode `Donut` plutôt que `Pie` pour changer un peu
+
+!!!info "Plusieurs sources possibles"
+    On remarque qu'en plus d'`Inline`, il y a d'autres sources possibles tel qu'`Azure blob` pour récupérer un fichier qui serait générer périodiquement sur un storage cloud.
+
+### Bascule sur le mode API
+
+On peut aussi imaginer que le CSV soit disponible via une API.
+
+Modifier la configuration de la visualization pour qu'elle utilise l'API plutôt que des données statiques et ainsi bénéficier de la possibilité d'avoir du rafraîchissement automatiquement
+
+!!!success "Visualization fonctionne toujours"
+    La visualization fonctionne et en activant le rafraîchissement automatique toutes les 5s, les données sont bien mises à jour.
+
+???danger "Spoiler la solution est là"
+    Il suffit de changer la source avec la valeur `URL` et configurer l'url de l'API utilisée pour récupérer le csv : `http://lumbercamp:8080/api/stock/csv`
