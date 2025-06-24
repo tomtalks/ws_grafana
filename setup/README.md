@@ -1,6 +1,7 @@
 # 🎉 Préparation de l'environnement 🛠️
 
 ## Choisissez votre terrain de jeu
+
 ### 🏡 En local
 
 Pour démarrer, nous allons installer Docker et lancer le stack Docker Compose préparé pour ce workshop.
@@ -25,11 +26,14 @@ Attention, pour un usage professionnel, une licence est requise pour Docker Desk
 
 1. Installez WSL2 et configurez-le comme version par défaut si ce n'est pas encore fait. Suivez [ce guide](https://docs.microsoft.com/fr-fr/windows/wsl/install) pour l'installation.
 2. Assurez-vous que votre distribution par défaut utilise WSL2.
+
 ```bash
 wsl --list --verbose
 ```
+
 3. Suivez les instructions pour [Linux](#linux).
 4. Dans votre terminal WSL, testez Docker avec :
+
 ```bash
 docker --version
 ```
@@ -66,14 +70,15 @@ Récupérez le repository contenant le stack Docker Compose :
 git clone https://github.com/tomtalks/otel_iac
 cd otel_iac
 ```
+
 [On est pret pour 🚀 Lancer la stack Docker Compose](#lancer-la-stack-docker-compose)
 
 ### ☁️ Avec Code Space
 
-Vous pouvez utiliser Code Space sur [ce repository](https://github.com/tomtalks/otel_iac){target="_blank"}
+Vous pouvez utiliser Code Space sur [ce repository](https://github.com/tomtalks/otel_iac){target="\_blank"}
 ![Code Space](CodeSpace.png)
 
-Docker est Docker Compose sont déjà installés.
+Docker et Docker Compose sont déjà installés.
 
 [On est pret pour 🚀 Lancer la stack Docker Compose](#lancer-la-stack-docker-compose)
 
@@ -90,10 +95,10 @@ docker compose up -d
 
 Cette commande va démarrer :
 
-* Une base de données PostgreSQL 🐘
-* Un backend Java avec OpenTelemetry ☕
-* Trois applications clientes du backend ☕
-* Un conteneur Grafana
+- Une base de données PostgreSQL 🐘
+- Un backend Java avec OpenTelemetry ☕
+- Trois applications clientes du backend ☕
+- Un conteneur Grafana
 
 ### 2. Vérifier que tout fonctionne
 
@@ -109,15 +114,15 @@ Vous devriez voir tous les services avec l'état `Up`.
 
 Les identifiants par défaut sont :
 
-* **Utilisateur** : `admin`
-* **Mot de passe** : `admin`
+- **Utilisateur** : `admin`
+- **Mot de passe** : `admin`
 
 !!! note "À la connexion, vous êtes invité à changer le mot de passe de l'utilisateur"
-      Ne le faites pas et cliquez sur le lien **Skip** en bas de la page.
+Ne le faites pas et cliquez sur le lien **Skip** en bas de la page.
 
 #### 🏡 En local
 
-Une fois la stack lancée, ouvrez votre navigateur et rendez-vous à l'adresse suivante : [http://localhost:3000](http://localhost:3000)
+Une fois la stack lancée, ouvrez votre navigateur et rendez-vous à l'adresse suivante : [http://localhost:3000](http://localhost:3000){target="\_blank"}
 
 #### ☁️ Avec Code space
 

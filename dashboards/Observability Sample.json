@@ -812,7 +812,7 @@
             "uid": "${DS_LOKI}"
           },
           "editorMode": "code",
-          "expr": "{application=\"$app_name\"} | json | line_format \"{{.severity}}\\t{{.body}}\"",
+          "expr": "{application=\"$app_name\"} | json | line_format \"{{.severity}} {{.body}}\"",
           "hide": false,
           "queryType": "range",
           "refId": "A"

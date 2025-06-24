@@ -1,8 +1,8 @@
 # Dashboard "Infinity"
 
-L'écosystème Grafana est riche de plugins, ... Il existe de nombreux plugins disponibles sur le site de Grafana. Certains permettent d'ajouter des visiualisations **panels**, d'autre des **datasources**  ou encore des applications **Apps**. Les **Apps** sont des plugins plus complexes qui permettent d'ajouter des fonctionnalités avancées à Grafana.
+L'écosystème Grafana est riche de plugins, ... Il existe de nombreux plugins disponibles sur le site de Grafana. Certains permettent d'ajouter des visualizationss **panels**, d'autres des **datasources** ou encore des applications **Apps**. Les **Apps** sont des plugins plus complexes qui permettent d'ajouter des fonctionnalités avancées à Grafana.
 
-Tout comme pour la dashboard Grafana fournit une page [web](https://grafana.com/grafana/plugins/) permettant de visualiser les plugins disponibles. Il est possible de filtrer par type de plugin (datasource, panel, app, ...).
+Tout comme pour la dashboard Grafana fournit une page [web](https://grafana.com/grafana/plugins/){target="_blank"} permettant de visualiser les plugins disponibles, il est possible de filtrer par type de plugin (datasource, panel, app, ...).
 
 La configuration est accessible par le menu `Administration > Plugins and data > Plugins` dans Grafana.
 
@@ -18,7 +18,7 @@ Celui de *Infinity* est l'un des plus complets car offrant de nombreux use cases
   - OAuth2 client credentials / JWT authentication
   - AWS/Azure/GCP authentication
 
-!!!Note "📖 `Man yesoreyeram-infinity-datasource`"
+!!!Note "📖 Doc plugin"
     La documentation est disponible sur le [site de Grafana](https://grafana.com/docs/plugins/yesoreyeram-infinity-datasource/latest/){target="_blank"}.
 
 ## Installation
@@ -64,17 +64,17 @@ On observe que l'on a bien les données en temps réel du stock:
 
 Retournez dans `Dashboard` et ajoutez un nouveau intitulé `API`.
 
-Ajoutez une visualisation utilisant notre nouvelle datasource `api-lumbercamp`:
+Ajoutez une visualization utilisant notre nouvelle datasource `api-lumbercamp`:
 
-- type `Pie chart``
+- type `Pie chart`
 - affichant les portions avec leur pourcentage par type de bois
 
 !!!success
     ![stock global](stock.png)
 
-Il serait aussi intéressant d'avoir une visualisation montrant les stocks "à risque" facilement.
+Il serait aussi intéressant d'avoir une visualization montrant les stocks "à risque" facilement.
 
-En dupliquant le widget précédent, configurez-en un nouveau n'affichant que les stocks en-dessous de 30 pièces disponibles.
+En dupliquant la visualization précédent, configurez-en un nouveau n'affichant que les stocks en-dessous de 30 pièces disponibles.
 
 !!!success
     ![warning](warning.png)

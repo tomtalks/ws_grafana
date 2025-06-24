@@ -48,7 +48,7 @@ On vous a préparé quelques dashboards exemples :
 !!!question "Quizz Perf API"
     Sur le Dashboard Perf API :
 
-    Pourquoi la visualisation **Number of request** ne donne pas le meme nombre de requetes `Order` que sa voisine ?
+    Pourquoi la visualization **Number of request** ne donne pas le meme nombre de requetes `Order` que sa voisine ?
 
     Et pourquoi y a t'il 2 lignes `Order` ?
 
@@ -59,6 +59,6 @@ On vous a préparé quelques dashboards exemples :
 ???danger "Spoiler la solution est là"
     Si on regarde les labels retournée on à 2 séries différentes. L'une pour avec le label `http_response_status_code="200"` et l'autre avec `http_response_status_code="418"`. On a donc 2 séries différentes pour la même requête. 
 
-    La visualisation **Number of 2xx Requests** filtre pour ne prendre que les requêtes avec le label `http_response_status_code=~"2.*"`.
+    la visualization **Number of 2xx Requests** filtre pour ne prendre que les requêtes avec le label `http_response_status_code=~"2.*"`.
 
 **🛫 Prochaine étape : Otel (*aka OpenTelemetry*) [➡️](../dashboard-metrics/otel.md)**

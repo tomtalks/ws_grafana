@@ -54,7 +54,7 @@ Toutes les ressources d'une organisation sont isolées des autres organisations.
 
 Si vous êtes membre de plusieurs organisations, vous pouvez changer d'organisation en cliquant sur le nom de l'organisation en haut à gauche de l'interface.
 
-* **Plugins** : Installez des plugins pour étendre les fonctionnalités de Grafana (widgets, datasources, extensions).
+* **Plugins** : Installez des plugins pour étendre les fonctionnalités de Grafana (visualizations, datasources, extensions).
 * **Users** : Gérez les utilisateurs et les permissions. Il est possible de regrouper les utilisateurs en **Teams** pour faciliter la gestion des droits.
 * **Authentification** : Permet de configurer les différents modes d'authentification (LDAP, OAuth, etc.)
 

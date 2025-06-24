@@ -1,5 +1,7 @@
 # Metrics Dashboard
 
+Dans un tout autre registre, on va afficher les métriques en lien avec l'utilisation de notre application.
+
 ## Configuration
 
 ### Prometheus
@@ -24,9 +26,9 @@ Vous pouvez d'ailleurs vous connecter à cette instance qui tourne en local [ici
 
 ### La fonction explore
 
-Avant de créer notre dashboard, on peut facilement explorer les données disponibles via cette *DataSource* en cliquant sur le bouton `Explore data` en haut à droite qui redirige vers le menu `Explore`. On retrouve le même type de formulaire que pour les requêtes d'un widget.
+Avant de créer notre dashboard, on peut facilement explorer les données disponibles via cette *DataSource* en cliquant sur le bouton `Explore data` en haut à droite qui redirige vers le menu `Explore`. On retrouve le même type de formulaire que pour les requêtes d'une visualization.
 
-On peut facilement voir les métriques disponibles via le `metrics browser`
+On peut facilement voir les métriques disponibles via le `metrics browser` en passant en mode `Code` plutot que Builder
 
 ![Metrics browser](image-16.png){width="300"}
 
@@ -34,7 +36,7 @@ Mais aussi grâce à l'auto-complétion:
 
 ![Auto-complete](image-17.png)
 
-Une visualisation par défaut est proposée pour afficher les données:
+Une visualization par défaut est proposée pour afficher les données:
 
 ![Viz](image-6.png)
 
@@ -84,7 +86,7 @@ Démarrons maintenant le lab : créer un nouveau Dashboard nommé *Dashboard de 
 
 ### Monitoring de la mémoire
 
-Ajouter une nouvelle visualisation pour afficher les métriques de mémoire de notre application Java en choisissant la *DataSource* `prometheus` précédemment créée.
+Ajouter une nouvelle visualization pour afficher les métriques de mémoire de notre application Java en choisissant la *DataSource* `prometheus` précédemment créée.
 
 On va utiliser la métrique suivante : *jvm_memory_used_bytes* pour configurer la *Query*.
 
@@ -97,17 +99,17 @@ Prometheus utilise des *Labels* pour donner plus d'informations sur une métriqu
 
 ![Details](image-19.png)
 
-#### Configuration du widget
+#### Configuration de la visualization
 
 ![données brutes](image.png)
 
-Pour le moment, notre widget n'est pas particulièrement lisible (Toutes les informations mémoire de nos JVM sont retournées sur le même graphe). On va ajouter des informations pour le rendre plus lisible.
+Pour le moment, notre visualization n'est pas particulièrement lisible (Toutes les informations mémoire de nos JVM sont retournées sur le même graphe). On va ajouter des informations pour le rendre plus lisible.
 
 On souhaite afficher les mémoires [Heap / Non Heap](https://medium.com/@kiarash.shamaii/understanding-javas-memory-model-and-the-inner-workings-of-garbage-collection-f73e2b399605){target="_blank"} pour le service *lumbercamp* pour suivre l'évolution de la mémoire.
 
-En observant les labels pour identifier ceux qui sont les plus intéressants et modifier le widget en conséquence:
+En observant les labels pour identifier ceux qui sont les plus intéressants et modifier la visualization en conséquence:
 
-* Filtrer pour n'afficher que les infos en lien avec le service *lumbercamp*.
+* Filtrer pour n'afficher que les infos en lien avec le service_name *lumbercamp*.
 * Modifier les unités du graphe pour que les valeurs soient en `bytes`
 * Afficher **uniquement 2** courbes représentant la mémoire de type *heap* et la mémoire de type *non_heap*
 
@@ -126,7 +128,7 @@ Le langage de requêtage *PromQL* permet de faire des opérations sur les donné
 ???danger "Spoiler la solution est là"
     Il faut faire 2 *Query* :
 
-    * Une pour la partie **heap** en sommant toutes les infos en lien avec un `jvm_memory_type` = `heap`
+    * Une pour la partie **heap** en **sommant** toutes les infos en lien avec un `jvm_memory_type` = `heap`
     ![Heap](image-21.png)
 
     * Une pour la partie **non_heap** en filtrant uniquement sur le `jvm_memory_pool_name` = `Metaspace` du fait qu'il représente déjà la somme des mémoires *non_heap*
@@ -136,7 +138,7 @@ Le langage de requêtage *PromQL* permet de faire des opérations sur les donné
 
 ### Monitoring du CPU
 
-On va aussi afficher la consommation CPU de notre application *lumbercamp*.
+*Dans une nouvelle visualization*, on va aussi afficher la consommation CPU de notre application *lumbercamp*.
 
 Pour cela, on va utiliser la métrique `jvm_cpu_time_seconds_total`.
 
@@ -158,6 +160,10 @@ Cette fonction travaille avec un **range-vector**. Le range-vector est un vecteu
 
 On utilisera les ranges **[1m]** **[5m]** **[15m]** qui vont calculer un rate par seconde en se basant sur l'ensemble des données des *X* dernières minutes pour chaque point de données. On reproduit ainsi l'affichage du `top` unix.
 
+Le plus simple est d'utiliser le mode `Code` ici, sachant que la fonction rate a une syntaxe : `rate(metric_name{filter="valeur"}[Xm])`.
+
+Une fois la 1ère query ok pour la valeur **1m**, utilisez le bouton *Dupliquer* pour créer les 2 autres queries en changeant le paramètre de temps.
+
 ???tip "Astuce"
     Vous pouvez facilement dupliquer une *Query* pour ne changer que l'intervalle souhaité
 
@@ -167,20 +173,23 @@ On utilisera les ranges **[1m]** **[5m]** **[15m]** qui vont calculer un rate pa
     ![CPU monitoring](image-26.png)
 
 ???danger "Spoiler la solution est là"
-    Il faut faire 3 *Query* en changeant l'interval
+    * Il faut faire 3 *Query* `rate(jvm_cpu_time_seconds_total{service_name="lumbercamp"}[5m])` en changeant l'interval
 
     ![CPU](image-23.png)
 
+    * Jouer avec les options de `Graph style` dans les options de la visualization pour obtenir le rendu attendu
+
+
 ## Filtrage par service
 
-Comme on l'a fait pour le dashboard Postgres, il serait pratique de pouvoir dynamiquement filtrer les informations affichées par les widgets.
+Comme on l'a fait pour le dashboard Postgres, il serait pratique de pouvoir dynamiquement filtrer les informations affichées par les visualizations.
 
 Pour ce dashboard, on va donc ajouter une variable permettant de changer le nom du service pour lequel on souhaite avoir les métriques.
 
 Objectifs:
 
 * Créer une variable `prom_service_name` basée sur la *DataSource* `prometheus` permettant de récupérer les services monitorés par Prometheus
-* Modifier les 2 widgets pour qu'il prenne en compte cette nouvelle variable dans leurs *Query* et dans leur titre
+* Modifier les 2 visualizations pour qu'il prenne en compte cette nouvelle variable dans leurs *Query* et dans leur titre
 
 !!!success
     ![Filtered by service](image-29.png)

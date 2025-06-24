@@ -13,10 +13,10 @@
 On aimerait voir s'il y a une corrélation entre la consommation CPU et la mémoire. Pour le moment, lors du survol d'un point du graph des CPU, on voit seulement les valeurs du TOP et pas de la mémoire.
 ![Single Tooltip](image-11.png)
 
-L'idée est de pouvoir facilement faire des corrélations entre les widgets en configurant le Dashboard.
+L'idée est de pouvoir facilement faire des corrélations entre les visualizations en configurant le Dashboard.
 
 !!!success
-    Quand on survole un widget, on a l'information qui s'affiche également sur les autres widgets
+    Quand on survole une visualization, on a l'information qui s'affiche également sur les autres visualizations
     ![Shared Tooltip](image-10.png)
 
 ???danger "Spoiler la solution est là"
@@ -28,7 +28,7 @@ Ici par exemple, on remarque que lorsque la mémoire baisse, le CPU augmente (av
 
 ### Annotations
 
-Ici, on peut configurer des alertes qui seront matérialisées directement sur les graphs sous forme [d'annotation](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/annotate-visualizations/). Il est possible de configrer des regles pour afficher automtiquement une annotation sur un graph.
+Ici, on peut configurer des alertes qui seront matérialisées directement sur les graphs sous forme [d'annotation](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/annotate-visualizations/){target="_blank"}. Il est possible de configrer des regles pour afficher automatiquement une annotation sur un graph.
 
 ### Variables
 
@@ -67,7 +67,7 @@ Pour le moment, un seul service est affiché. Ce n'est pas très pratique.
 
 Revenez sur le dashboard. On va rajouter un élément de présentation sur notre dashboard : une *Row*.
 
-Cet élément de présentation permet de dupliquer dynamiquement ef facilement les différentes visualisations en fonction des valeurs qui sont choisies dans les variables.
+Cet élément de présentation permet de dupliquer dynamiquement ef facilement les différentes visualizations en fonction des valeurs qui sont choisies dans les variables.
 
 Tout d'abord modifier la variable `prom_service_name` et activer les options `Multi-value`et `Include All option`:
 

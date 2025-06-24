@@ -75,7 +75,7 @@ Permet de configurer les différents aspects de Grafana :
 
 ### 6. **Plugins**
 Accédez aux extensions qui enrichissent Grafana :
-- Ajoutez des visualisations personnalisées.
+- Ajoutez des visualizationss personnalisées.
 - Connectez des intégrations supplémentaires.
 
 ### 7. **Help**
