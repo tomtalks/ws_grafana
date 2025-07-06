@@ -38,7 +38,7 @@ Cette application stocke les données dans une base de données PostgreSQL. Les 
 
 On va cette fois-ci faire un dashboard en utilisant cette source de données PostgreSQL. On va afficher les commandes.
 
-// TODO Ajouter création dashboard
+Dans le menu `Dashboards`, créer un nouveau dashboard pour cette partie.
 
 ## Données statiques
 
